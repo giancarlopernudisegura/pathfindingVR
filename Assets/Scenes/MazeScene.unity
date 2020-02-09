@@ -288,7 +288,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 2, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 1259831794}
   - component: {fileID: 1259831793}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: loader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -329,11 +329,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 1
-  walls: []
+  walls:
+  - {x: 0, y: 1, z: 0}
+  - {x: 4, y: 1, z: 4}
   start: {x: 0, y: 0, z: 0}
   goal: {x: 0, y: 0, z: 0}
   gridUnit: 1
   plane: {fileID: 1547270175713770643, guid: 6d583ee5e2ca1c043a399112a967053b, type: 3}
+  wallObj: {fileID: 191940781262713645, guid: 23ba5d7a8db5c11429af69a325a6f584, type: 3}
+  goalObj: {fileID: 8968948022777423533, guid: 2f4adb45bcb89724fac1422cff7a5fee, type: 3}
 --- !u!65 &1259831794
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -421,7 +425,7 @@ PrefabInstance:
     - target: {fileID: 816440247723969544, guid: 29417b5870b0a84468566864563a6e27,
         type: 3}
       propertyPath: walls.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 816440247723969544, guid: 29417b5870b0a84468566864563a6e27,
         type: 3}
@@ -436,17 +440,37 @@ PrefabInstance:
     - target: {fileID: 816440247723969544, guid: 29417b5870b0a84468566864563a6e27,
         type: 3}
       propertyPath: walls.Array.data[1].x
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 816440247723969544, guid: 29417b5870b0a84468566864563a6e27,
         type: 3}
       propertyPath: size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 816440247723969544, guid: 29417b5870b0a84468566864563a6e27,
+        type: 3}
+      propertyPath: walls.Array.data[0].y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 816440247723969544, guid: 29417b5870b0a84468566864563a6e27,
+        type: 3}
+      propertyPath: walls.Array.data[1].z
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 816440247723969545, guid: 29417b5870b0a84468566864563a6e27,
         type: 3}
       propertyPath: m_Name
-      value: Cube
+      value: loader
+      objectReference: {fileID: 0}
+    - target: {fileID: 816440247723969546, guid: 29417b5870b0a84468566864563a6e27,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 816440247723969547, guid: 29417b5870b0a84468566864563a6e27,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 816440247723969548, guid: 29417b5870b0a84468566864563a6e27,
         type: 3}
