@@ -49,7 +49,9 @@ public class GridWorld : MonoBehaviour
 
     private void SpawnGoal()
     {
-        Instantiate(GoalObj, ConvertToWorld(Goal), Quaternion.identity);
+        Vector3 v = ConvertToWorld(Goal);
+        v.y = 1 + (GoalObj.transform.localScale.y / 2);
+        Instantiate(GoalObj, v, Quaternion.identity);
     }
 
     private void SpawnGrid()
