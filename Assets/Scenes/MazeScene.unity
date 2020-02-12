@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.48319906, g: 0.5256333, b: 0.5460428, a: 1}
+  m_IndirectSpecularColor: {r: 0.22169542, g: 0.25960603, b: 0.28034773, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -145,8 +146,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 1
+  m_Shape: 0
   m_Color: {r: 0.39782843, g: 0.5660378, b: 0.47750655, a: 1}
   m_Intensity: 0.13
   m_Range: 10
@@ -224,7 +226,7 @@ GameObject:
   - component: {fileID: 963194226}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -262,7 +264,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 90
+  field of view: 26.991467
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -343,6 +345,7 @@ MonoBehaviour:
   WallObj: {fileID: 191940781262713645, guid: 23ba5d7a8db5c11429af69a325a6f584, type: 3}
   GoalObj: {fileID: 8968948022777423533, guid: 2f4adb45bcb89724fac1422cff7a5fee, type: 3}
   Node: {fileID: 2805879014846004297, guid: 1723a0b0032f718458d9f52cbdd3880d, type: 3}
+  PlayerView: {fileID: 963194227}
 --- !u!65 &1259831794
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -372,6 +375,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -427,6 +431,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 816440247723969545, guid: 29417b5870b0a84468566864563a6e27,
+        type: 3}
+      propertyPath: m_Name
+      value: loader
+      objectReference: {fileID: 0}
     - target: {fileID: 816440247723969544, guid: 29417b5870b0a84468566864563a6e27,
         type: 3}
       propertyPath: walls.Array.size
@@ -607,10 +616,10 @@ PrefabInstance:
       propertyPath: Walls.Array.data[7].z
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 816440247723969545, guid: 29417b5870b0a84468566864563a6e27,
+    - target: {fileID: 816440247723969547, guid: 29417b5870b0a84468566864563a6e27,
         type: 3}
-      propertyPath: m_Name
-      value: loader
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 816440247723969546, guid: 29417b5870b0a84468566864563a6e27,
         type: 3}
@@ -625,11 +634,6 @@ PrefabInstance:
     - target: {fileID: 816440247723969546, guid: 29417b5870b0a84468566864563a6e27,
         type: 3}
       propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 816440247723969547, guid: 29417b5870b0a84468566864563a6e27,
-        type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 816440247723969548, guid: 29417b5870b0a84468566864563a6e27,

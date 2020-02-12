@@ -9,11 +9,12 @@ public class GridWorld : MonoBehaviour
     public GridNode StartNode;
     public Vector3 StartLoc;
     public Vector3 Goal;
-    public static float GridUnit = 1;
+    public static float GridUnit = 4;
     public GameObject Plane;
     public GameObject WallObj;
     public GameObject GoalObj;
     public GameObject Node;
+    public Camera PlayerView;
 
     // Start is called before the first frame update
     void Start()
@@ -23,11 +24,13 @@ public class GridWorld : MonoBehaviour
         SpawnGoal();
         SpawnGrid();
         DisplayNodes();
+        CameraToPlayer(StartLoc);
     }
 
     // Update is called once per frame
     void Update()
     {
+        
     }
 
     private void SpawnPlane()
@@ -42,7 +45,9 @@ public class GridWorld : MonoBehaviour
         foreach (Vector3 wallVtr in Walls)
         {
             Vector3 worldVector = ConvertToWorld(wallVtr);
-            WallObj.transform.localScale = new Vector3(GridUnit, 1, GridUnit);
+            float height = GridUnit * 3;
+            WallObj.transform.localScale = new Vector3(GridUnit, height, GridUnit);
+            worldVector.y = (1 + height) / 2;
             Instantiate(WallObj, worldVector, Quaternion.identity);
         }
     }
@@ -50,7 +55,10 @@ public class GridWorld : MonoBehaviour
     private void SpawnGoal()
     {
         Vector3 v = ConvertToWorld(Goal);
-        v.y = 1 + (GoalObj.transform.localScale.y / 2);
+        float height = GridUnit * 2;
+        float width = GridUnit * .6f;
+        v.y = 1 + (height / 2);
+        GoalObj.transform.localScale = new Vector3(width, height, width);
         Instantiate(GoalObj, v, Quaternion.identity);
     }
 
@@ -105,9 +113,22 @@ public class GridWorld : MonoBehaviour
         foreach (GridNode n in StartNode.Neighbors)
         {
             Vector3 v = ConvertToWorld(n.Location);
-            v.y -= .5f - (Node.transform.localScale.y / 2);
+            float width = .8f * GridUnit;
+            float height = .2f * GridUnit;
+            Node.transform.localScale = new Vector3(width, height, width);
+            v.y -= (1 - Node.transform.localScale.y / 2);
             Instantiate(Node, v, Quaternion.identity);
         }
+    }
+
+    public void CameraToPlayer(Vector3 GridLocation)
+    {
+        Vector3 WorldLocation = ConvertToWorld(GridLocation);
+        Debug.Log(WorldLocation);
+        Debug.Log(PlayerView.transform.localPosition);
+        WorldLocation.y = PlayerView.transform.position.y;
+        PlayerView.transform.localPosition = WorldLocation;
+        Debug.Log(PlayerView.transform.localPosition);
     }
 
     public static Vector3 ConvertToWorld(Vector3 input)
