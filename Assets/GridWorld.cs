@@ -6,7 +6,7 @@ public class GridWorld : MonoBehaviour
 {
     public static float Size = 8;
     public List<Vector3> Walls = new List<Vector3>();
-    public GridNode StartNode;
+    public GridNode CurrentNode;
     public Vector3 StartLoc;
     public Vector3 Goal;
     public static float GridUnit = 4;
@@ -14,7 +14,7 @@ public class GridWorld : MonoBehaviour
     public GameObject WallObj;
     public GameObject GoalObj;
     public GameObject Node;
-    public Camera PlayerView;
+    public GameObject Player;
 
     // Start is called before the first frame update
     void Start()
@@ -104,13 +104,12 @@ public class GridWorld : MonoBehaviour
                 nodeDictionary[v].Neighbors.Add(nodeDictionary[v + Vector3.left]);
             }
         }
-
-        StartNode = nodeDictionary[StartLoc];
+        CurrentNode = nodeDictionary[StartLoc];
     }
 
     private void DisplayNodes()
     {
-        foreach (GridNode n in StartNode.Neighbors)
+        foreach (GridNode n in CurrentNode.Neighbors)
         {
             Vector3 v = ConvertToWorld(n.Location);
             float width = .8f * GridUnit;
@@ -124,11 +123,8 @@ public class GridWorld : MonoBehaviour
     public void CameraToPlayer(Vector3 GridLocation)
     {
         Vector3 WorldLocation = ConvertToWorld(GridLocation);
-        Debug.Log(WorldLocation);
-        Debug.Log(PlayerView.transform.localPosition);
-        WorldLocation.y = PlayerView.transform.position.y;
-        PlayerView.transform.localPosition = WorldLocation;
-        Debug.Log(PlayerView.transform.localPosition);
+        //Player.transform.position.x = WorldLocation.x;
+        //Player.transform.position.z = WorldLocation.z;
     }
 
     public static Vector3 ConvertToWorld(Vector3 input)
