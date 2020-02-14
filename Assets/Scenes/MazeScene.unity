@@ -121,7 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-<<<<<<< HEAD
 --- !u!1001 &386210401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -179,8 +178,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 3}
-=======
->>>>>>> ef36d6be61b6284a51512744ca8f6fb7b7455801
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +325,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -363,10 +359,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29e3e4511966ba94d8ba0b98c6c62f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-=======
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
->>>>>>> ef36d6be61b6284a51512744ca8f6fb7b7455801
 --- !u!1 &1259831792
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,24 +396,15 @@ MonoBehaviour:
   Walls:
   - {x: 1, y: 0, z: 1}
   - {x: 2, y: 0, z: 3}
-<<<<<<< HEAD
   - {x: 5, y: 0, z: 3}
   CurrentNode: {fileID: 0}
   PrevLoc: {x: 0, y: 0, z: 0}
   StartLoc: {x: 3, y: 1, z: 3}
-=======
-  - {x: 5, y: 0, z: 2}
-  StartLoc: {x: 0, y: 1, z: 0}
->>>>>>> ef36d6be61b6284a51512744ca8f6fb7b7455801
   Goal: {x: 2, y: 0, z: 2}
   Plane: {fileID: 1547270175713770643, guid: 6d583ee5e2ca1c043a399112a967053b, type: 3}
   WallObj: {fileID: 191940781262713645, guid: 23ba5d7a8db5c11429af69a325a6f584, type: 3}
   GoalObj: {fileID: 8968948022777423533, guid: 2f4adb45bcb89724fac1422cff7a5fee, type: 3}
-<<<<<<< HEAD
   Node: {fileID: 125956, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
-=======
-  Node: {fileID: 2805879014846004297, guid: 1723a0b0032f718458d9f52cbdd3880d, type: 3}
->>>>>>> ef36d6be61b6284a51512744ca8f6fb7b7455801
   Player: {fileID: 0}
 --- !u!65 &1259831794
 BoxCollider:
@@ -611,11 +594,7 @@ PrefabInstance:
     - target: {fileID: 816440247723969544, guid: 29417b5870b0a84468566864563a6e27,
         type: 3}
       propertyPath: Walls.Array.data[2].z
-<<<<<<< HEAD
       value: 3
-=======
-      value: 2
->>>>>>> ef36d6be61b6284a51512744ca8f6fb7b7455801
       objectReference: {fileID: 0}
     - target: {fileID: 816440247723969544, guid: 29417b5870b0a84468566864563a6e27,
         type: 3}
@@ -645,20 +624,12 @@ PrefabInstance:
     - target: {fileID: 816440247723969544, guid: 29417b5870b0a84468566864563a6e27,
         type: 3}
       propertyPath: StartLoc.x
-<<<<<<< HEAD
       value: 3
-=======
-      value: 1
->>>>>>> ef36d6be61b6284a51512744ca8f6fb7b7455801
       objectReference: {fileID: 0}
     - target: {fileID: 816440247723969544, guid: 29417b5870b0a84468566864563a6e27,
         type: 3}
       propertyPath: StartLoc.z
-<<<<<<< HEAD
       value: 3
-=======
-      value: 1
->>>>>>> ef36d6be61b6284a51512744ca8f6fb7b7455801
       objectReference: {fileID: 0}
     - target: {fileID: 816440247723969544, guid: 29417b5870b0a84468566864563a6e27,
         type: 3}
