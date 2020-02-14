@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/mainMenu.unity
-    guid: 2e8b4a31c17524526b7f239d5e0976aa
+    guid: 4625501124bc84a54b4188a9b7927729
   - enabled: 1
     path: Assets/Scenes/MazeScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
