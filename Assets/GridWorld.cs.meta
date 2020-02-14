@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 0a6f340858100000037f340858100000
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Plane: {fileID: 1547270175713770643, guid: 6d583ee5e2ca1c043a399112a967053b, type: 3}
+  - WallObj: {fileID: 191940781262713645, guid: 23ba5d7a8db5c11429af69a325a6f584,
+      type: 3}
+  - GoalObj: {fileID: 8968948022777423533, guid: 2f4adb45bcb89724fac1422cff7a5fee,
+      type: 3}
+  - Node: {fileID: 2805879014846004297, guid: 1723a0b0032f718458d9f52cbdd3880d, type: 3}
+  - PlayerView: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
