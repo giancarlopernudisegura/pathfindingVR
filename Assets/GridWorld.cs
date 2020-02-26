@@ -35,9 +35,16 @@ public class GridWorld : MonoBehaviour
         // if location has changed since last tick
         if (PrevLoc != ConvertToGrid(Player.transform.position))
         {
-            CurrentNode = nodeDictionary[ConvertToGrid(Player.transform.position)];
+            Vector3 GridLocation = ConvertToGrid(Player.transform.position);
+            CurrentNode = nodeDictionary[GridLocation];
             Debug.Log("Location has updated");
             DisplayNodes();
+
+            if (GridLocation.x == Goal.x && GridLocation.z == Goal.z)
+            {
+                // win screen
+                Debug.Log("Yay you win!");
+            }
         }
         PrevLoc = ConvertToGrid(Player.transform.position);
     }

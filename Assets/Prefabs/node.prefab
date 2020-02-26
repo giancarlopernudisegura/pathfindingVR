@@ -14,11 +14,7 @@ GameObject:
   - component: {fileID: 3709165446075224634}
   m_Layer: 0
   m_Name: node
-<<<<<<< HEAD
   m_TagString: node
-=======
-  m_TagString: Untagged
->>>>>>> ef36d6be61b6284a51512744ca8f6fb7b7455801
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
