@@ -21,6 +21,7 @@ public class GridWorld : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Player = GameObject.Find("Player");
         SpawnPlane();
         SpawnWalls();
         SpawnGoal();
@@ -71,7 +72,7 @@ public class GridWorld : MonoBehaviour
     private void Spawn()
     {
         GameObject PlayerRig = GameObject.Find("Player");
-        PlayerRig.transform.localPosition = ConvertToWorld(StartLoc);
+        //PlayerRig.transform.localPosition = ConvertToWorld(StartLoc);
     }
 
     private void SpawnGoal()
